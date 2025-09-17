@@ -17,5 +17,8 @@
         <input type="number" name="stock" required><br><br>
 
         <button type="submit" class="btn btn-success">Guardar</button>
+        <a href="{{ route('productos.index') }}" class="btn btn-warning" style="text-decoration:none; color:black;">
+            Volver
+        </a>
     </form>
 @endsection

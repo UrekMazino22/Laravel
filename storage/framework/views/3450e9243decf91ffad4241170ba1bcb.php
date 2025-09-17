@@ -214,21 +214,22 @@ tbody tr:hover{ background:#fafafa }
   <header>
     <h1>Sistema de Ventas</h1>
     <nav>
-      <a href="{{ route('pos.index') }}">POS</a>
-      <a href="{{ route('admin.index') }}">Administración</a>
+      <a href="<?php echo e(route('pos.index')); ?>">POS</a>
+      <a href="<?php echo e(route('admin.index')); ?>">Administración</a>
     </nav>
   </header>
 
   <div class="container">
-    {{-- Alertas --}}
-    @if(session('success'))
-      <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
-    @if(session('error'))
-      <div class="alert alert-error">{{ session('error') }}</div>
-    @endif
+    
+    <?php if(session('success')): ?>
+      <div class="alert alert-success"><?php echo e(session('success')); ?></div>
+    <?php endif; ?>
+    <?php if(session('error')): ?>
+      <div class="alert alert-error"><?php echo e(session('error')); ?></div>
+    <?php endif; ?>
 
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
   </div>
 </body>
 </html>
+<?php /**PATH /workspace/Laravel/resources/views/layouts/app.blade.php ENDPATH**/ ?>

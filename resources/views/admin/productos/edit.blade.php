@@ -17,5 +17,7 @@
         <input type="number" name="stock" value="{{ $producto->stock }}" required><br><br>
 
         <button type="submit" class="btn btn-success">Actualizar</button>
+               <a href="{{ route('productos.index') }}" class="btn btn-warning" style="text-decoration:none; color:black;">
+            Volver
     </form>
 @endsection

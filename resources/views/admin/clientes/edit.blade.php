@@ -26,5 +26,7 @@
         <input type="text" name="telefono" value="{{ $cliente->telefono }}"><br><br>
 
         <button type="submit" class="btn btn-success">Actualizar</button>
+
+<a href="{{ route('clientes.index') }}" class="btn btn-warning">Volver</a>
     </form>
 @endsection
